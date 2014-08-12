@@ -1,0 +1,64 @@
+body {
+	margin:0 auto;
+	text-align: center;
+	min-width: 1200px;
+}
+.header-container {
+	position: relative;
+	padding:0;
+	margin-top:20px;
+	height:200px;
+	background-color:rgba(192,192,192,0.5);
+}
+#header {
+	font-size: 60px;
+	color: #CCFFFF;
+	font-family:'Qwigley', cursive;
+}
+ span {
+ 	vertical-align: middle;
+ 	line-height: normal;
+ }
+
+p {
+	font-family:'Yanone Kaffeesatz', sans-serif;
+	width:25%;
+	font-size:1em;
+}
+form, p {
+	position: relative;
+	display: inline-block;
+	margin: 5px 20px 5px 20px;
+	vertical-align: middle;
+}
+input {
+	width:300px;
+}
+.button {
+	width:60px;
+}
+ .gallery-wrapper {
+ 	padding:10px 10px;
+ 	background-color:gray;
+ }
+
+.imageWrapper {
+	position: relative;
+	width:16%;
+	display:inline-block;
+	margin:1%;
+}
+ .imageWrapper img {
+ 	width:100%;
+
+	border-radius:5px;
+	box-shadow: 10px 10px 5px #000000;
+ }
+.location {
+	position: absolute;
+	bottom:0;
+	padding-left:5px;
+	color:white;
+	height:55px;
+	overflow: hidden;
+}
