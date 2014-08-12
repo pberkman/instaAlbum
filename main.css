@@ -11,7 +11,7 @@ body {
 	background-color:rgba(192,192,192,0.5);
 }
 #header {
-	font-size: 60px;
+	font-size: 80px;
 	color: #CCFFFF;
 	font-family:'Qwigley', cursive;
 }
@@ -54,7 +54,7 @@ input {
 	border-radius:5px;
 	box-shadow: 10px 10px 5px #000000;
  }
-.location {
+.caption {
 	position: absolute;
 	bottom:0;
 	padding-left:5px;

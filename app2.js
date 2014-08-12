@@ -24,7 +24,7 @@
 			$.each(getPhotos.data, function(index, photo) {
 				results += '<div class="imageWrapper">';
 				results += '<img src="' + photo.images.thumbnail.url + '"/>';
-				results += '<div class="location">' + photo.caption.text + '</div>';
+				results += '<div class="caption">' + photo.caption.text + '</div>';
 				results += '</div>';
 				//if (photo.location.name !== undefined) {
 			});
