@@ -6,7 +6,6 @@ body {
 .header-container {
 	position: relative;
 	padding:0;
-	margin-top:20px;
 	height:200px;
 	background-color:rgba(192,192,192,0.5);
 }
@@ -24,12 +23,26 @@ p {
 	font-family:'Yanone Kaffeesatz', sans-serif;
 	width:25%;
 	font-size:1em;
+	line-height:1.5em;
 }
 form, p {
 	position: relative;
 	display: inline-block;
 	margin: 5px 20px 5px 20px;
 	vertical-align: middle;
+}
+i {
+	font-size: 3em;
+}
+.createAlbum, .directions {
+	position:absolute;
+	text-align: center;
+	margin:0 auto;
+	top:160px;
+	display: none;
+	height:600px;
+	min-width:1200px;
+	background-color: #CCFFFF;
 }
 input {
 	width:300px;

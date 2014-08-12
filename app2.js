@@ -1,15 +1,29 @@
  $(document).ready(function() {
+
 	var hashtag = $("#search").val();
 	searchWorld(hashtag);
 
+	//click on heart or question icon to get information
+	$(".fa-heart").on("click",function () {
+		$(".createAlbum").show();
+	});
+	$(".fa-question").on("click",function () {
+		$(".directions").show();
+	});
+
 	$("form").submit(function (evt) {
 		evt.preventDefault();
-		// clear the gallery before a submit
-		$(".gallery-wrapper").html("");
+
+		//hide directions if they were up
+		$(".createAlbum").hide();
+		$(".directions").hide();
 		
 		var hashtag = $("#search").val();
+		// initate ajax call
 		searchWorld(hashtag);
 	}); //end submit
+
+	
 }); //end ready	
 	
 	var searchWorld = function(hashtag) {
