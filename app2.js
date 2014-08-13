@@ -69,11 +69,13 @@ $(document).ready(function() {
 				slideResults += '</div>';
 				$(".gallery").html(results);
 				$(".slides-wrapper").html(slideResults);
+		
 
 				//click on image to bring up slideshow
 				$(".imageWrapper").click(function() {
 					//show slideshow box
 					$(".slideshow-container").show();
+				});
 
 					//initiate slider
 					var slides = $("#slides");
@@ -88,12 +90,10 @@ $(document).ready(function() {
 					$("#left").click(function() {
 						slides.cycle('prev');
 					});
-				});
-		
-		}); //end .done()
 
-		//hover over arrows to change appearance
-		$('.arrow').hover(function() {
-				$(this).toggleClass("arrow-background");
-			});
+					//hover over arrows to change appearance
+					$('.arrow').hover(function() {
+						$(this).toggleClass("arrow-background");
+					});
+		}); //end .done()		
 	}; //end searchPics
