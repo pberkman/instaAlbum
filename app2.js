@@ -15,12 +15,16 @@ $(document).ready(function() {
 	$(".fa-heart").on("click",function () {
 		//clear out gallery
 		$(".gallery").html("");
+		//hide slideshow
+		$(".slideshow-container").hide();
 		$(".directions").hide();
 		$(".createAlbum").show();
 	});
 	$(".fa-question").on("click",function () {
 		//clear out gallery
 		$(".gallery").html("");
+		//hide slideshow
+		$(".slideshow-container").hide();
 		$(".directions").show();
 	});
 
@@ -36,8 +40,6 @@ $(document).ready(function() {
 
 		// initate ajax call
 		searchPics(hashtag);
-
-		
 
 	}); //end submit
 

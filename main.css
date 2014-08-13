@@ -32,11 +32,13 @@ form, p {
 	margin: 5px 20px 5px 20px;
 	vertical-align: middle;
 }
+
+/* the note about not including the # symbol*/
 form > p {
-	font-size: 0.5em;
+	font-size: 0.9em;
 	width:300px;
 	height:10px;
-	padding-top:3px;
+	
 }
 i {
 	font-size: 3em;
