@@ -37,12 +37,21 @@ $(document).ready(function() {
 	}); //end submit
 
 	//initiate slider
-	$('.slides').slick({
- 		dots: true
+	
+	/*$(".imageWrapper").on("click", function() {
+		$('#slides').cycle();
+		$("slideshow-container").show();
 	});
+	
+
+
+	$('.left').slickPrev();
+
 	$('.arrow').hover(function() {
 		$(this).toggleClass("arrow-background");
 	});
+
+	*/
 
 }); //end ready	
 	
@@ -55,7 +64,7 @@ $(document).ready(function() {
 		})
 		.done(function(getPhotos) {
 			var results = '<div class="gallery-wrapper">';
-			var slideResults = '<div class="slides">';
+			var slideResults = '<div id="slides">';
 			$.each(getPhotos.data, function(index, photo) {
 				results += '<div class="imageWrapper">';
 				slideResults += '<div class="slideImageWrapper">';
@@ -70,5 +79,6 @@ $(document).ready(function() {
 				slideResults += '</div>';
 				$(".gallery").html(results);
 				$(".slides-wrapper").html(slideResults);
+			$('#slides').cycle();
 		});
 	};

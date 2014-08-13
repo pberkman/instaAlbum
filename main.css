@@ -104,10 +104,9 @@ input {
 .slideshow-container {
 	position:absolute;
 	top:200px;
-	overflow: hidden;
 	background-color: rgba(122,119,119,0.9);
 	/*display: none;*/
-	height:600px;
+	height:610px;
 	width:100%;
 	min-width: 1020px;
 }
@@ -128,6 +127,8 @@ input {
 .slideImageWrapper {
 	position: relative;
 	display:inline-block;
+	height:600px;
+	width:600px;
 }
 .slideImageWrapper img {
  	width:100%;
