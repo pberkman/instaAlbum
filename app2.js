@@ -1,7 +1,7 @@
 $(document).ready(function() {
-
+	//initiate ajax call on page load
 	var hashtag = $("#search").val();
-	searchWorld(hashtag);
+	searchPics(hashtag);
 
 	//hover over icons
 	$("p .fa-heart").hover(function() {
@@ -24,6 +24,7 @@ $(document).ready(function() {
 		$(".directions").show();
 	});
 
+	// sumbit new hashtag to get new photos
 	$("form").submit(function (evt) {
 		evt.preventDefault();
 
@@ -32,30 +33,17 @@ $(document).ready(function() {
 		$(".directions").hide();
 		
 		var hashtag = $("#search").val();
+
 		// initate ajax call
-		searchWorld(hashtag);
+		searchPics(hashtag);
+
+		
+
 	}); //end submit
-
-	//initiate slider
-	
-	/*$(".imageWrapper").on("click", function() {
-		$('#slides').cycle();
-		$("slideshow-container").show();
-	});
-	
-
-
-	$('.left').slickPrev();
-
-	$('.arrow').hover(function() {
-		$(this).toggleClass("arrow-background");
-	});
-
-	*/
 
 }); //end ready	
 	
-	var searchWorld = function(hashtag) {
+	var searchPics = function(hashtag) {
 	
 		var getPhotos = $.ajax ({
 			url:"https://api.instagram.com/v1/tags/" + hashtag + "/media/recent?client_id=920d83e2718741b885af9d6323a498b4",
@@ -79,6 +67,31 @@ $(document).ready(function() {
 				slideResults += '</div>';
 				$(".gallery").html(results);
 				$(".slides-wrapper").html(slideResults);
-			$('#slides').cycle();
-		});
-	};
+
+				//click on image to bring up slideshow
+				$(".imageWrapper").click(function() {
+					//show slideshow box
+					$(".slideshow-container").show();
+
+					//initiate slider
+					var slides = $("#slides");
+					slides.cycle({
+						fx:'scrollHorz'
+					}).cycle("pause");
+
+					//set up buttons to change pics
+					$("#right").click(function() {
+						slides.cycle('next');
+					});
+					$("#left").click(function() {
+						slides.cycle('prev');
+					});
+				});
+		
+		}); //end .done()
+
+		//hover over arrows to change appearance
+		$('.arrow').hover(function() {
+				$(this).toggleClass("arrow-background");
+			});
+	}; //end searchPics
