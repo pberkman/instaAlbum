@@ -1,13 +1,26 @@
- $(document).ready(function() {
+$(document).ready(function() {
 
 	var hashtag = $("#search").val();
 	searchWorld(hashtag);
 
+	//hover over icons
+	$("p .fa-heart").hover(function() {
+		$(this).toggleClass("bigger");
+	});
+	$("p .fa-question").hover(function() {
+		$(this).toggleClass("bigger");
+	});
+
 	//click on heart or question icon to get information
 	$(".fa-heart").on("click",function () {
+		//clear out gallery
+		$(".gallery").html("");
+		$(".directions").hide();
 		$(".createAlbum").show();
 	});
 	$(".fa-question").on("click",function () {
+		//clear out gallery
+		$(".gallery").html("");
 		$(".directions").show();
 	});
 
@@ -23,7 +36,14 @@
 		searchWorld(hashtag);
 	}); //end submit
 
-	
+	//initiate slider
+	$('.slides').slick({
+ 		dots: true
+	});
+	$('.arrow').hover(function() {
+		$(this).toggleClass("arrow-background");
+	});
+
 }); //end ready	
 	
 	var searchWorld = function(hashtag) {
@@ -35,50 +55,20 @@
 		})
 		.done(function(getPhotos) {
 			var results = '<div class="gallery-wrapper">';
+			var slideResults = '<div class="slides">';
 			$.each(getPhotos.data, function(index, photo) {
 				results += '<div class="imageWrapper">';
+				slideResults += '<div class="slideImageWrapper">';
 				results += '<img src="' + photo.images.thumbnail.url + '"/>';
+				slideResults += '<img src="' + photo.images.standard_resolution.url + '"/>';
 				results += '<div class="caption">' + photo.caption.text + '</div>';
+				slideResults += '<div class="caption">' + photo.caption.text + '</div>';
 				results += '</div>';
-				//if (photo.location.name !== undefined) {
+				slideResults += '</div>';
 			});
 				results += '</div>';
+				slideResults += '</div>';
 				$(".gallery").html(results);
+				$(".slides-wrapper").html(slideResults);
 		});
 	};
-
-/*
-$(document).ready(function() {
-
-$("form").submit(function(evt) {
-	evt.preventDefault();
-	var $searchField = $("#search");
-	var submitButton = $("#submit");
-
-	//URL for getJSON
-	var instagramAPI = "https://api.instagram.com/v1/media/search?client_id=920d83e2718741b885af9d6323a498b4";
-	
-	var hashtag = $searchField.val();
-	//data for JSON
-	var instagramOptions = {
-		tags:hashtag,
-		lat:48.85544,
-		lng:2.294351,
-		format:"json",
-		distance:5000
-	};
-
-	//callback for getJson
-	function displayPhotos(data) {
-		var photoHTML = '<div class="gallery-wrapper">';
-		$.each(data.data, function(i, photo) {
-			photoHTML += '<div class="imageWrapper">';
-			photoHTML += '<img src="' + photo.images.thumbnail.url + '"/></div>';
-			//photoHTML += '<div class="location"' + photo.location.name + '</div></div>';
-		});
-		photoHTML += '</div>';
-		$(".gallery-wrapper").html(photoHTML);
-	}
-	$.getJSON(instagramAPI, instagramOptions, displayPhotos);
-}); // end form submit
-}); // end ready */
