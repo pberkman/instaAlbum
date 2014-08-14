@@ -115,6 +115,10 @@ input {
 	width:100%;
 	min-width: 1020px;
 }
+.fa-times {
+	float:right;
+	padding:10px;
+}
 .float-container {
 	position: relative;
 	padding-top:20px;

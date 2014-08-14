@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	//initiate ajax call on page load
-	var hashtag = $("#search").val();
+	var hashtag = "themoscos";
 	searchPics(hashtag);
 
 	//hover over icons
@@ -9,6 +9,9 @@ $(document).ready(function() {
 	});
 	$("p .fa-question").hover(function() {
 		$(this).toggleClass("bigger");
+	});
+	$(".fa-times").hover(function() {
+		$(this).toggleClass("arrow-background");
 	});
 
 	//click on heart or question icon to get information
@@ -75,6 +78,10 @@ $(document).ready(function() {
 				$(".imageWrapper").click(function() {
 					//show slideshow box
 					$(".slideshow-container").show();
+				});
+				//click on the "X" to exit the slideshow
+				$(".fa-times").click(function() {
+					$(".slideshow-container").hide();
 				});
 
 					//initiate slider
