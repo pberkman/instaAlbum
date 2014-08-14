@@ -63,8 +63,16 @@ $(document).ready(function() {
 				slideResults += '<div class="slideImageWrapper">';
 				results += '<img src="' + photo.images.thumbnail.url + '"/>';
 				slideResults += '<img src="' + photo.images.standard_resolution.url + '"/>';
-				results += '<div class="caption">' + photo.caption.text + '</div>';
-				slideResults += '<div class="caption">' + photo.caption.text + '</div>';
+				
+				//if statement for if there is no caption for the pics
+				if (photo.caption.text === "null") {
+					results += '<div class="caption"></div>';
+					slideResults += '<div class="caption"></div>';
+				} else {
+					results += '<div class="caption">' + photo.caption.text + '</div>';
+					slideResults += '<div class="caption">' + photo.caption.text + '</div>';
+				}
+
 				results += '</div>';
 				slideResults += '</div>';
 			});
