@@ -22,10 +22,12 @@ body {
 p {
 	font-family:'Yanone Kaffeesatz', sans-serif;
 	width:25%;
+	height:115px;
 	font-size:1em;
 	line-height:1.5em;
-	height:115px;
+	
 }
+
 form, p {
 	position: relative;
 	display: inline-block;
