@@ -65,7 +65,7 @@ $(document).ready(function() {
 				slideResults += '<img src="' + photo.images.standard_resolution.url + '"/>';
 				
 				//if statement for if there is no caption for the pics
-				if (photo.caption.text === null) {
+				if (photo.caption === null) {
 					results += '<div class="caption"></div>';
 					slideResults += '<div class="caption"></div>';
 				} else {
