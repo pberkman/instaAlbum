@@ -6,7 +6,7 @@ body {
 .header-container {
 	position: relative;
 	padding:0;
-	height:200px;
+	height:250px;
 	background-color:rgba(192,192,192,0.5);
 }
 #header {
@@ -50,7 +50,7 @@ i {
 	position:absolute;
 	text-align: center;
 	margin:0 auto;
-	top:183px;
+	top:200px;
 	display: none;
 	height:100%;
 	width:100%;
@@ -72,9 +72,20 @@ input {
 .button {
 	width:60px;
 }
+/* class to toggle icon size for "create and album" & "instructions"*/
+.bigger {
+	font-size: 3.5em;
+	color:black;
+}
+
+
+
+
+
  .gallery-wrapper {
  	padding:10px 10px;
  	background-color:gray;
+
  }
 
 .imageWrapper {
@@ -92,75 +103,12 @@ input {
 	box-shadow: 10px 10px 5px #000000;
  }
 
- /* for both gallery and slideshow images*/
 .caption {
 	position: absolute;
-	bottom:0;
-	padding-left:5px;
+	bottom:5px;
+	text-align:center;
 	color:white;
-	height:55px;
+	height:57px;
 	width:90%;
 	overflow: hidden;
-}
-/* class to toggle icon size for "create and album" & "instructions"*/
-.bigger {
-	font-size: 3.5em;
-	color:black;
-}
-
-/* slideshow formatting*/
-.slideshow-container {
-	position:absolute;
-	top:200px;
-	background-color: rgba(122,119,119,0.9);
-	display: none;
-	height:1000px;
-	width:100%;
-	min-width: 1020px;
-}
-.fa-times {
-	float:right;
-	padding:10px;
-}
-.float-container {
-	position: relative;
-	padding-top:20px;
-	margin:0 auto;
-	text-align: center;
-	width:600px;
-	height:500px;
-}
-.slides-wrapper {
-	width:500px;
-}
-.slides {
-	width:500px;
-	display:inline-block;
-}
-.slideImageWrapper {
-	position: relative;
-	display:inline-block;
-	height:500px;
-	width:500px;
-}
-.slideImageWrapper img {
- 	width:100%;
-}
-
-.float-right {
-	float: right;
-}
-.float-left {
-	float:left;
-}
-.arrow-background {
-	background-color: rgba(81,81,81,0.8);
-	margin:0;
-	color:rgb(239,242,238);
-	border-radius: 5px;
-}
-.arrow {
-	width:50px;
-	height: 500px;
-	margin:0;
 }

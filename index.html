@@ -10,20 +10,20 @@
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="jquery.cycle.all.js"></script>
-	<script src="app2.js"></script>
+	<script src="app.js"></script>
 </head>
 <body>
 	<div class="header-container">
 		<div id="header"><span class="fa fa-instagram"></span> instaAlbum</div>
-	<div class="instruct-container">
-		<p><i class="fa fa-heart"></i><br>Create an Album</p>
-		<form>
-			<input type="text" placeholder="Insert tag here ex. themoscos" id="search" name="tags" autofocus required/>
-			<br><input type="submit" class="button" id="submit"/>
-			<br><p># symbol not needed to search</p>
-		</form>
-		<p><i class="fa fa-question"></i><br>Instructions</p>
-	</div>
+		<div class="instruct-container">
+			<p><i class="fa fa-heart"></i><br>Create an Album</p>
+			<form>
+				<input type="text" placeholder="Insert tag here ex. parisadventure" id="search" name="tags" autofocus required/>
+				<br><button type="submit" class="button" id="submit">Submit</button>
+				<br><p># symbol not needed to search</p>
+			</form>
+			<p><i class="fa fa-question"></i><br>Instructions</p>
+		</div>
 	</div>
 	<div class="gallery">
 	</div>	
@@ -42,17 +42,6 @@
 		<h1>How to find an album</h1><br>
 		<p>The search field will look for the most recent photos that have been "tagged" with the hashtag that you submit. Insert the hashtag for the ablum you are looking for. Photos that have been tagged with your input will appear below.</p>
 	</section>
-	<div class="slideshow-container">
-		<i class="fa fa-times"></i>
-		<div class="float-container">
-			<div class="float-left arrow" id="left" style="line-height:32"><i class="fa fa-arrow-left"></i></div>
-			<div class="float-right arrow" id="right" style="line-height:32"><i class="fa fa-arrow-right"></i></div>
-			<div class="slides-wrapper float-left">	
-			</div>
-			
-		</div>
-	</div>
-	
 </body>
 </html>
 
