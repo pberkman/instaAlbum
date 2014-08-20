@@ -31,6 +31,11 @@ $(document).ready(function() {
 		$(".directions").show();
 	});
 
+	
+	$("#search").click (function() {
+		$(this).val("");
+	});
+
 	// sumbit new hashtag to get new photos
 	$("form").submit(function (evt) {
 		evt.preventDefault();
