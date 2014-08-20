@@ -21,17 +21,16 @@ body {
 
 p {
 	font-family:'Yanone Kaffeesatz', sans-serif;
-	width:25%;
-	height:115px;
+
 	font-size:1em;
 	line-height:1.5em;
 	
 }
 
-form, p {
+form, .iconButtons {
 	position: relative;
 	display: inline-block;
-	margin: 5px 20px 5px 20px;
+	margin: 5px 50px 5px 50px;
 	vertical-align: middle;
 }
 
@@ -43,8 +42,14 @@ form > p {
 	
 }
 i {
-	font-size: 3em;
+	font-size: 4em;
 	padding-bottom:3px;
+}
+.iconButtons {
+	border:none;
+	background-color: transparent;
+	outline: 0;
+
 }
 .createAlbum, .directions {
 	position:absolute;
@@ -52,7 +57,7 @@ i {
 	margin:0 auto;
 	top:200px;
 	display: none;
-	height:100%;
+	height: 100%;
 	width:100%;
 	min-width:1020px;
 	background-color: #CCFFFF;
@@ -62,15 +67,21 @@ h1 {
 	font-size: 40px;
 	margin-bottom: 0;
 }
+
 .siteName {
 	font-family:'Qwigley', cursive;
 	font-size: 1.5em;
 }
+.createAlbum p, .directions p {
+	width:350px;
+	margin:0 auto;
+	text-align: center;
+	}
 input {
 	width:300px;
 }
 .button {
-	width:60px;
+	width:auto;
 }
 /* class to toggle icon size for "create and album" & "instructions"*/
 .bigger {

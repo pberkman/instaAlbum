@@ -1,13 +1,13 @@
-$(document).ready(function() {
+(document).ready(function() {
 	//initiate ajax call on page load
 	var hashtag = "parisadventure";
 	searchPics(hashtag);
 
 	//hover over icons
-	$("p .fa-heart").hover(function() {
+	$("button .fa-heart").hover(function() {
 		$(this).toggleClass("bigger");
 	});
-	$("p .fa-question").hover(function() {
+	$("button .fa-question").hover(function() {
 		$(this).toggleClass("bigger");
 	});
 	$(".fa-times").hover(function() {
@@ -28,10 +28,10 @@ $(document).ready(function() {
 		$(".gallery").html("");
 		//hide slideshow
 		$(".slideshow-container").hide();
+		$(".createAlbum").hide();
 		$(".directions").show();
 	});
 
-	
 	$("#search").click (function() {
 		$(this).val("");
 	});
