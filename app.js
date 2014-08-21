@@ -15,7 +15,7 @@
 	});
 
 	//click on heart or question icon to get information
-	$(".fa-heart").on("click",function () {
+	$(".createButton").on("click",function () {
 		//clear out gallery
 		$(".gallery").html("");
 		//hide slideshow
@@ -23,7 +23,7 @@
 		$(".directions").hide();
 		$(".createAlbum").show();
 	});
-	$(".fa-question").on("click",function () {
+	$(".instructButton").on("click",function () {
 		//clear out gallery
 		$(".gallery").html("");
 		//hide slideshow
