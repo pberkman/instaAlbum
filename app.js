@@ -1,4 +1,4 @@
-(document).ready(function() {
+$(document).ready(function() {
 	//initiate ajax call on page load
 	var hashtag = "parisadventure";
 	searchPics(hashtag);
