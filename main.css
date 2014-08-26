@@ -140,35 +140,37 @@ input {
 
 
 
-
-
- .gallery-wrapper {
- 	padding:10px 10px;
+.gallery {
+	padding:10px 10px;
  	background-color:gray;
+}
+ .gallery-wrapper {
+ 	width:1000px;
+ 	margin:0 auto;
 
  }
-
-.imageWrapper {
+.grouped_elements {
 	position: relative;
-	width:16%;
 	display:inline-block;
+	width:170px;
+	height: 170px;
 	margin:1%;
-}
-.imageWrapper:hover {
-	cursor: pointer;
-}
- .imageWrapper img {
- 	width:100%;
 	border-radius:5px;
-	box-shadow: 10px 10px 5px #000000;
+	box-shadow: 5px 5px 5px #000000;
+}
+
+img {
+ 	margin:0 auto;
+ 	width:170px;
+ 	height:170px;
  }
 
 .caption {
 	position: absolute;
-	bottom:5px;
+	bottom:3px;
 	text-align:center;
 	color:white;
-	height:57px;
+	height:50px;
 	width:100%;
 	overflow: hidden;
 }

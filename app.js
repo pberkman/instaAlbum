@@ -1,4 +1,4 @@
-(document).ready(function() {
+$(document).ready(function() {
 	//initiate ajax call on page load
 	var hashtag = "parisadventure";
 	searchPics(hashtag);
@@ -68,62 +68,27 @@
 			var imageCounter=0;
 
 			var results = '<div class="gallery-wrapper">';
-			//var slideResults = '<div id="slides">';
 
 			$.each(getPhotos.data, function(index, photo) {
 				
-				results += '<div class="imageWrapper">';
-				//slideResults += '<a href="javascript:setSlide(' + imageCounter + ')"<div class="slideImageWrapper">';
-				results += '<img src="' + photo.images.standard_resolution.url + '"/>';
-				//slideResults += '<img src="' + photo.images.standard_resolution.url + '"/>';
+				results += '<a class="grouped_elements" rel="group1" href="' + photo.images.standard_resolution.url + '"><img src="' + photo.images.standard_resolution.url + '"/>';
 				
 				//if statement for if there is no caption for the pics
 				if (photo.caption === null) {
 					results += '<div class="caption"></div>';
-					//slideResults += '<div class="caption"></div>';
 				} else {
 					results += '<div class="caption">' + photo.caption.text + '</div>';
-					//slideResults += '<div class="caption">' + photo.caption.text + '</div>';
 				}
 
-				results += '</div>';
-				//slideResults += '</div></a>';
-				imageCounter++;
-			});
+				results += '</a>';
+
+			}); // each
 				results += '</div>';//end of .gallery-wrapper
-				//slideResults += '</div>';//end of #slides
-
+		
 				$(".gallery").html(results);
-				//$(".slides-wrapper").html(slideResults);
-		
-
-				//click on image to bring up slideshow
-				/*$(".imageWrapper").click(function() {
-					//show slideshow box
-					$(".slideshow-container").show();
-					
-				});
-				//click on the "X" to exit the slideshow
-				$(".fa-times").click(function() {
-					$(".slideshow-container").hide();
-				});*/
-		
-					
-/*
-					set up buttons to change pics
-					$("#right").click(function() {
-						slides.cycle('next');
-					});
-					$("#left").click(function() {
-						slides.cycle('prev');
-					});
-
-					//hover over arrows to change appearance
-					$('.arrow').hover(function() {
-						$(this).toggleClass("arrow-background");
-					});
-
-*/
+	
+				// fancy box slideshow
+				$("a.grouped_elements").fancybox();
 
 		}); //end .done()
 
