@@ -51,11 +51,12 @@ body {
 	margin:0 auto;
 	text-align: center;
 	min-width: 1020px;
+	min-height: 1006px;
 }
 .header-container {
 	position: relative;
-	padding:0;
-	height:250px;
+	padding-top:25px;
+	height:220px;
 	background-color:rgba(192,192,192,0.5);
 }
 #header {
@@ -67,15 +68,11 @@ body {
  	vertical-align: middle;
  	line-height: normal;
  }
-
 p {
 	font-family:'Yanone Kaffeesatz', sans-serif;
-
 	font-size:1em;
 	line-height:1.5em;
-	
 }
-
 form, .iconButtons {
 	position: relative;
 	display: inline-block;
@@ -88,7 +85,9 @@ form > p {
 	font-size: 0.9em;
 	width:300px;
 	height:10px;
-	
+}
+.button {
+	margin-top:20px;
 }
 i {
 	font-size: 4em;
@@ -98,7 +97,6 @@ i {
 	border:none;
 	background-color: transparent;
 	outline: 0;
-
 }
 .createAlbum, .directions {
 	position:absolute;
@@ -110,13 +108,13 @@ i {
 	width:100%;
 	min-width:1020px;
 	background-color: #CCFFFF;
+	padding-top: 25px;
 }
 h1 {
 	font-family:'Qwigley', cursive;
 	font-size: 40px;
 	margin-bottom: 0;
 }
-
 .siteName {
 	font-family:'Qwigley', cursive;
 	font-size: 1.5em;
@@ -158,19 +156,20 @@ input {
 	border-radius:5px;
 	box-shadow: 5px 5px 5px #000000;
 }
-
 img {
  	margin:0 auto;
  	width:170px;
  	height:170px;
  }
-
 .caption {
 	position: absolute;
-	bottom:3px;
+	bottom:5px;
 	text-align:center;
 	color:white;
-	height:50px;
+	max-height:50px;
 	width:100%;
 	overflow: hidden;
+	background-color: rgba(0,0,0,0.6);
+	box-sizing:border-box;
+	text-shadow:#000000 0 0 1px;
 }
