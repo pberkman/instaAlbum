@@ -170,6 +170,5 @@ img {
 	width:100%;
 	overflow: hidden;
 	background-color: rgba(0,0,0,0.6);
-	box-sizing:border-box;
 	text-shadow:#000000 0 0 1px;
 }
